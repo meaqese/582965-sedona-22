@@ -1,7 +1,7 @@
 # Личный проект «Седона» 
 
 * Студент: [Big Boy](https://up.htmlacademy.ru/adaptive/22/user/582965).
-* Наставник: `Неизвестно`.
+* Наставник: [Артик Ман](https://htmlacademy.ru/profile/id1445657).
 
 ---
 
