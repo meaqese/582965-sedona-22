@@ -4,6 +4,7 @@
   "description": "Личный проект «Седона» от HTML Academy",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.0.0",
+    "bemlint": "^1.7.0",
     "stylelint": "13.12.0",
     "stylelint-config-htmlacademy": "0.1.4"
   },
@@ -18,5 +19,6 @@
   ],
   "engines": {
     "node": "12.18.2"
-  }
+  },
+  "dependencies": {}
 }
