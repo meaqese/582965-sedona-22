@@ -1,0 +1,84 @@
+.advantages__list {
+  list-style: none;
+
+  margin: 0;
+  padding: 0;
+
+  counter-reset: num;
+}
+
+.advantages__info {
+  background-color: $light-blue;
+
+  text-align: center;
+
+  width: 100%;
+  counter-increment: num;
+
+  color: white;
+
+  &--real-town {
+    padding: 55px 0 39px;
+  }
+
+  &--devils-bridge {
+    padding: 39px 0 35px;
+  }
+
+  &--minimal {
+    padding: 25px 0 24px;
+
+    background-color: $light-grey;
+    color: black;
+  }
+}
+
+.advantages__info--minimal:nth-child(n + 2):nth-child(-n + 4) {
+  &::after {
+    position: absolute;
+    left: 0;
+    right: 0;
+
+    margin: 24px auto 25px;
+
+    content: "";
+
+    display: block;
+
+    width: 87.5%;
+    height: 1px;
+
+    background-color: $grey;
+  }
+}
+
+.advantages__title {
+  font-family: "PT Sans", sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 26px;
+  text-transform: uppercase;
+
+  margin: 0;
+
+  &::after {
+    font-family: "PT Sans", sans-serif;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 21px;
+
+    display: block;
+
+    margin-top: 13px;
+    margin-bottom: 20px;
+
+    content: "— № " counter(num) " —";
+  }
+}
+
+.advantages__description {
+  font-family: "PT Sans", sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+}
