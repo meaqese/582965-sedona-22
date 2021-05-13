@@ -8,14 +8,13 @@
 }
 
 .advantages__info {
-  background-color: $light-blue;
+  background-color: $main-color;
 
   text-align: center;
+  color: white;
 
   width: 100%;
   counter-increment: num;
-
-  color: white;
 
   &--real-town {
     padding: 55px 0 39px;
@@ -28,7 +27,7 @@
   &--minimal {
     padding: 25px 0 24px;
 
-    background-color: $light-grey;
+    background-color: $minimal-advantage-bg;
     color: black;
   }
 }
@@ -48,7 +47,7 @@
     width: 87.5%;
     height: 1px;
 
-    background-color: $grey;
+    background-color: $minimal-advantage-division;
   }
 }
 

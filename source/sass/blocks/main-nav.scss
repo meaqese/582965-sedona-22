@@ -37,10 +37,10 @@
   width: 100%;
   height: 55px;
 
-  background-color: $light-blue;
+  background-color: $main-color;
 
-  border-bottom: 1px solid $dark-blue;
-  border-top: 1px solid $light-blue-20;
+  border-bottom: 1px solid $nav-button-border-bottom;
+  border-top: 1px solid $nav-button-border-top;
 
   &--first {
     border-top: none;
