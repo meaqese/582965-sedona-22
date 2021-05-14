@@ -1,0 +1,112 @@
+.form {
+  padding: 0 20px;
+}
+
+.form__block {
+  position: relative;
+  padding: 20px 0 25px; // TODO: у 4 блока, 15px
+
+  border: 0;
+
+  //&::before {
+  //  position: absolute;
+  //  top: 0;
+  //
+  //  height: 1px;
+  //  width: 100%;
+  //
+  //  content: "";
+  //
+  //  background-color: $form-block-division;
+  //} TODO: пока не работает
+}
+
+.form__title {
+  font-family: "PT Sans", sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 26px;
+  text-transform: uppercase;
+  text-align: center;
+
+  margin: 0;
+
+  display: inline;
+}
+
+.form__field {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  &--multiline {
+    flex-direction: column;
+    align-items: start;
+
+    gap: 8px;
+  }
+}
+
+.form__field + .form__field {
+  margin-top: 20px;
+}
+
+.form__label {
+  font-family: "PT Sans", sans-serif;
+  font-size: 14px;
+  line-height: 26px;
+  text-transform: uppercase;
+  color: $form-label;
+}
+
+.form__input {
+  font-family: "PT Sans", sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 26px;
+  color: $form-input-color;
+
+  background-color: $form-input;
+
+  border: none;
+
+  height: 58px;
+  width: 100%;
+
+  padding: 18px 22px 14px;
+
+  &::placeholder {
+    color: $form-input-color;
+  }
+
+  &--radio {
+    width: 48px;
+    height: 48px;
+  }
+
+  &--checkbox {
+    width: 46px;
+    height: 46px;
+  }
+}
+
+.form__textarea {
+  font-family: "PT Sans", sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 26px;
+  color: $form-input-color;
+
+  width: 100%;
+  height: 160px;
+
+  margin-bottom: 51px;
+
+  background-color: $form-input;
+  border: 0;
+  resize: none;
+
+  &::placeholder {
+    color: $form-input-color;
+  }
+}
