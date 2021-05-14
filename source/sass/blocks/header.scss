@@ -1,0 +1,32 @@
+.header {
+  width: 100%;
+
+  background-color: $white;
+}
+
+.header__open-button {
+  position: relative;
+
+  width: 23px;
+  height: 22px;
+
+  border: 0;
+
+  background-color: transparent;
+
+  &::before {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    content: "";
+
+    width: 23px;
+    height: 4px;
+
+    background-color: $main-color;
+
+    box-shadow: 0 9px 0 0 $main-color, 0 18px 0 0 $main-color;
+  }
+}
