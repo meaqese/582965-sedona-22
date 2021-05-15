@@ -10,24 +10,10 @@
 
   padding: 22px 20px 15px;
 
-  &::before,
-  &:last-child::after {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
+  border-top: 1px solid $photo-item-division;
 
-    content: "";
-
-    width: 100%;
-    height: 1px;
-
-    background-color: $photo-item-division;
-  }
-
-  &:last-child::after {
-    top: unset;
-    bottom: 0;
+  &:last-child {
+    border-bottom: 1px solid $photo-item-division;
   }
 }
 
@@ -71,6 +57,6 @@
     width: 23px;
     height: 21px;
 
-    background-image: url("../../img/like-icon.svg");
+    background-image: url("../img/like-icon.svg");
   }
 }
