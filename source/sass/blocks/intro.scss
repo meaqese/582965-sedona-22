@@ -1,7 +1,9 @@
 .intro {
   text-align: center;
+}
 
-  &--with-after-triangle {
+@media (max-width: $mobile-width-only) {
+  .intro--with-after-triangle {
     &::after {
       position: absolute;
 
@@ -13,6 +15,7 @@
 
       background-image: url("../img/triangle-after-intro.svg");
       background-repeat: no-repeat;
+      background-position: 50% 0;
     }
   }
 }
