@@ -10,7 +10,6 @@
     display: grid;
 
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 586px 256px 256px;
   }
 }
 
@@ -25,12 +24,28 @@
 
   &--real-town {
     padding: 55px 0 39px;
+
+    @media (min-width: $tablet-width) {
+      padding: 40px 32px 44px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding: 47px 53px 57px;
+    }
   }
 
   &--devils-bridge {
     padding: 39px 0 35px;
 
     grid-column: 3 / -1;
+
+    @media (min-width: $tablet-width) {
+      padding: 43px 36px 41px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding: 51px 78px;
+    }
   }
 
   &--minimal {
@@ -41,6 +56,10 @@
 
     @media (min-width: $tablet-width) {
       padding: 42px 48px 41px 46px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding: 43px 43px 62px 42px;
     }
   }
 }
@@ -95,6 +114,8 @@
   font-size: 14px;
   line-height: 21px;
   text-transform: uppercase;
+
+  margin: 0;
 }
 
 .advantages__image {
@@ -108,8 +129,6 @@
 
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
-
-      grid-template-rows: 256px 330px;
     }
 
     &--right {
@@ -117,13 +136,11 @@
 
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
-
-      grid-template-rows: 256px;
     }
   }
 
   .advantages__image {
-    height: 256px;
+    height: min-content;
 
     &--left {
       grid-column: 2 / -1;
