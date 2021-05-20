@@ -6,6 +6,12 @@
   align-items: center;
 
   padding: 28px 0 23px;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
 }
 
 .footer__hashtag {
@@ -15,4 +21,8 @@
   line-height: 26px;
 
   margin-bottom: 33px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+  }
 }

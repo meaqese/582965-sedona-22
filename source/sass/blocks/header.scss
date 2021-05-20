@@ -2,10 +2,29 @@
   width: 100%;
 
   background-color: $white;
+
+  min-height: 56px;
+}
+
+.header__logo {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  width: 102px;
+  height: 84px;
+
+  margin: 0 auto;
 }
 
 .header__open-button {
-  position: relative;
+  display: block;
+  position: absolute;
+
+  top: 17px;
+  right: 20px;
 
   width: 23px;
   height: 22px;
@@ -28,5 +47,19 @@
     background-color: $main-color;
 
     box-shadow: 0 9px 0 0 $main-color, 0 18px 0 0 $main-color;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.header__menu {
+  position: relative;
+  height: 56px;
+
+  @media (min-width: $tablet-width) {
+    position: static;
+    height: 0;
   }
 }
