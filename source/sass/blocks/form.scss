@@ -1,5 +1,16 @@
 .form {
   padding: 0 20px;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    padding: 0 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 120px;
+  }
 }
 
 .form__block {
@@ -7,7 +18,6 @@
   padding: 20px 0 25px; // TODO: у 4 блока, 15px
 
   border: 0;
-
   //&::before {
   //  position: absolute;
   //  top: 0;
@@ -19,6 +29,38 @@
   //
   //  background-color: $form-block-division;
   //} TODO: пока не работает
+
+  @media (min-width: $tablet-width) {
+    &:first-child {
+      grid-column: 2 / 3;
+      grid-row: 1 / 2;
+    }
+
+    &:nth-child(2) {
+      grid-column: 1 / -1;
+      grid-row: 2 / 3;
+    }
+
+    &:nth-child(3) {
+      grid-column: 1 / 2;
+      grid-row: 1 / 2;
+    }
+
+    &:nth-child(4) {
+      grid-column: 1 / -1;
+      grid-row: 3 / 4;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &:nth-child(5) {
+      grid-column: 1 / -1;
+      grid-row: 4 / 5;
+    }
+  }
 }
 
 .form__title {
@@ -34,6 +76,29 @@
   display: inline;
 }
 
+.form__fields {
+  &--contacts {
+    @media (min-width: $desktop-width) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &--visited-places {
+    @media (min-width: $tablet-width) {
+      display: grid;
+      grid-template-columns: min-content min-content;
+      gap: 42px;
+    }
+
+    @media (min-width: $desktop-width) {
+      display: flex;
+      gap: 42px;
+    }
+  }
+}
+
 .form__field {
   display: flex;
   align-items: center;
@@ -44,11 +109,23 @@
     align-items: start;
 
     gap: 8px;
+
+    @media (min-width: $desktop-width) {
+      flex-direction: row;
+      align-items: center;
+      gap: 16px;
+    }
   }
 }
 
 .form__field + .form__field {
   margin-top: 20px;
+}
+
+@media (min-width: $desktop-width) {
+  .form__field--multiline {
+    margin: 0;
+  }
 }
 
 .form__label {
@@ -57,6 +134,17 @@
   line-height: 26px;
   text-transform: uppercase;
   color: $form-label;
+  white-space: nowrap;
+
+  &--multiline {
+    @media (min-width: $tablet-width) {
+      margin-left: 22px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin: 0;
+    }
+  }
 }
 
 .form__input {
@@ -109,5 +197,25 @@
 
   &::placeholder {
     color: $form-input-color;
+  }
+}
+
+.form__definitions {
+  display: none;
+  font-family: "PT Sans", sans-serif;
+  font-size: 14px;
+  line-height: 26px;
+  color: $form-definitions;
+  text-transform: uppercase;
+  text-align: right;
+
+  @media (min-width: $tablet-width) {
+    display: inline;
+  }
+}
+
+.form__not-desktop {
+  @media (min-width: $desktop-width) {
+    display: none;
   }
 }
